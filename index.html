@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VSE NAJBOLJŠE STARINA – galerija</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #d3d3d3;   /* svetlo siva */
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 48px;
+            padding: 2rem 1.8rem 2.5rem 1.8rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* N A S L O V – vedno na vrhu */
+        .greeting-top {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1f2b3c, #2c3e4e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            word-break: keep-all;
+        }
+
+        /* vsaka slika v svojem kartončku */
+        .image-card {
+            margin-bottom: 2.8rem;
+            text-align: center;
+        }
+
+        .image-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 32px;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 18px 28px -12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-block;
+        }
+
+        .image-card img:hover {
+            transform: scale(1.01);
+            box-shadow: 0 24px 36px -14px rgba(0, 0, 0, 0.3);
+        }
+
+        .img-caption {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: #2c3e4e;
+            background: #e9ecef;
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .divider {
+            width: 70px;
+            height: 2px;
+            background: #a0aab5;
+            margin: 1rem auto 2rem auto;
+            border-radius: 4px;
+            opacity: 0.4;
+        }
+
+        .helper-note {
+            margin-top: 2.2rem;
+            font-size: 0.8rem;
+            background: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 60px;
+            color: #2c3e4e;
+            display: inline-block;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .main-container {
+                padding: 1.3rem;
+            }
+            .greeting-top {
+                font-size: 2rem;
+            }
+            .image-card img {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <!-- ✅ BESEDILO NA VRHU, TOČNO TAKO KOT STE ŽELELI -->
+    <div class="greeting-top">
+        VSE NAJBOLJŠE STARINA !
+    </div>
+
+    <!-- ========= 1. SLIKA – obvezna (omejitev 50) ========= -->
+    <div class="image-card">
+        <img src="https://www.grafikaplus.si/image.ashx?id=UDNAL-5206&size=800&fill=1&watermark=0"
+             alt="Nalepka znak omejitev hitrosti 50 – rdeč obroč, bela podlaga, črna 50"
+             title="Omejitev 50">
+        <div class="img-caption">To pa ni tako mala cifra ;) !</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========= 3 PROSTE SLIKE (vstavite svoje URL-je) ========= -->
+    <!-- 
+        NAVODILO: V vsakem <img> zamenjajte src="https://via.placeholder.com/..." 
+        s polnim URL-jem vaše osebne slike (ali relativno potjo, če naložite slike v mapo 'images').
+        Slike bodo samodejno centrirane in odzivne.
+    -->
+
+    <!-- 2. slika – prva osebna fotografija -->
+    <div class="image-card">
+        <img src="https://via.placeholder.com/800x600?text=images/Slika_rojstni_dan_50tka.jpg"
+             alt="Vaša prva osebna slika"
+             title="Osebna fotografija 1">
+        <div class="img-caption">Rada te imava, Tim in Lara !</div>
+    </div>
+
+    <!-- 3. slika – druga osebna fotografija -->
+    <div class="image-card">
+        <img src="https://via.placeholder.com/800x600?text=images/Poroka_slika_50tka.jpg"
+             alt="Vaša druga osebna slika"
+             title="Osebna fotografija 2">
+        <div class="img-caption">In vsi naj tej sliki te imamo radi !</div>
+    </div>
+
+    <!-- 4. slika – tretja osebna fotografija -->
+    <div class="image-card">
+        <img src="https://via.placeholder.com/800x600?text=images/slika_50tka_delo.jpg"
+             alt="Vaša tretja osebna slika"
+             title="Osebna fotografija 3">
+        <div class="img-caption">Želim ti da skupaj ustvarimo še kak lep spomin in mesto !</div>
+    </div>
+
+    <div class="helper-note">
+        📤 Kako vstaviti lastne slike: <br>
+        • Naloži fotografije v mapo <strong>images</strong> (znotraj istega repozitorija) in uporabi pot <code>images/moja-slike.jpg</code><br>
+        • Ali uporabi direktni URL z ImgBB / Imgur / GitHub hosted slike.<br>
+        Po zamenjavi bo stran takoj prikazala tvoje fotografije.
+    </div>
+</div>
+</body>
+</html>
